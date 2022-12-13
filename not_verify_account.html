@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login</title>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link rel="stylesheet" href="./assets/css/style.css" />
+	</head>
+	<body>
+		<div class="header">
+			<h1>E-WALLET</h1>
+			<div class="dropdown">
+				<button
+					class="btn btn-secondary dropdown-toggle"
+					type="button"
+					id="dropdownMenuButton"
+					data-toggle="dropdown"
+					aria-haspopup="true"
+					aria-expanded="false"
+				>
+					<i class="fas fa-user"></i>
+				</button>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="./reset_password.html">
+						<i class="fas fa-key"></i> Change password</a
+					>
+					<a class="dropdown-item" href="./logout.html">
+						<i class="fas fa-long-arrow-right"></i> Logout
+					</a>
+				</div>
+			</div>
+			<div class="dropleft">
+				<button
+					class="btn btn-secondary dropdown-toggle"
+					type="button"
+					id="dropleftMenuButton"
+					data-toggle="dropdown"
+					aria-haspopup="true"
+					aria-expanded="false"
+				>
+					<i class="fa-solid fa-user text-light"></i>
+				</button>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="./reset_password.php"
+						><i class="fa-solid fa-key mr-2"></i> Change password</a
+					>
+					<a class="dropdown-item" href="./logout.php"
+						><i class="fa-solid fa-arrow-right-from-bracket mr-2"></i> Logout</a
+					>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row navi">
+				<div class="col-lg-3">
+					<ul class="navi__list">
+						<li class="navi__item-1">
+							<a
+								href="./not_verify_account."
+								class="btn navi__item-2"
+								id="home"
+							>
+								<i class="fas fa-home-lg-alt"></i> Home
+							</a>
+						</li>
+						<li class="navi__item-1">
+							<a
+								class="btn navi__item-2"
+								id="withdrawal"
+								onclick="alertNotification()"
+							>
+								<i class="fas fa-money-bill"></i> Withdrawal
+							</a>
+						</li>
+						<li class="navi__item-1">
+							<a
+								class="btn navi__item-2"
+								id="transfer"
+								onclick="alertNotification()"
+							>
+								<i class="fas fa-exchange"></i> Transfer money
+							</a>
+						</li>
+						<li class="navi__item-1">
+							<a
+								class="btn navi__item-2"
+								id="phone-card"
+								onclick="alertNotification()"
+							>
+								<i class="fas fa-pager"></i> Buy phone card
+							</a>
+						</li>
+						<li class="navi__item-1">
+							<a
+								class="btn navi__item-2"
+								id="history"
+								onclick="alertNotification()"
+							>
+								<i class="fas fa-history"></i> Transact history
+							</a>
+						</li>
+					</ul>
+
+					<!-- Modal information of user -->
+					<div
+						class="modal fade"
+						id="infor"
+						tabindex="-1"
+						role="dialog"
+						aria-labelledby="inforLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-infor text-dark" id="inforLabel">
+										Your information
+									</h5>
+									<button
+										type="button"
+										class="close"
+										data-dismiss="modal"
+										aria-label="Close"
+									>
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body bg-dark text-light">
+									<div class="name" id="infor-name">
+										<i class="fas fa-user mb-2"></i>
+										<?= $name ?>
+									</div>
+									<div class="phone-number" id="infor-phone">
+										<i class="fas fa-phone-alt mb-2"></i>
+										<?= $phone ?>
+									</div>
+									<div class="phone-mail" id="infor-mail">
+										<i class="fas fa-envelope mb-2"></i>
+										<?= $email ?>
+									</div>
+									<div class="phone-address" id="infor-address">
+										<i class="fas fa-address-book mb-2"></i>
+										<?= $address ?>
+									</div>
+									<div class="phone-birthday" id="infor-birthday">
+										<i class="fas fa-birthday-cake"></i>
+										<?= $birth_day ?>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-9">
+					<div class="content">
+						<!-- Money interface and deposit -->
+						<div class="content__recharge bg-dark">
+							<h2>Total Balance</h2>
+							<h3>
+								<?= $balance ?>
+								<button
+									type="button"
+									class="top-money"
+									data-toggle="modal"
+									data-target="#addRecharge"
+									id="deposit"
+									onclick="alertNotification()"
+								>
+									<i class="fad fa-plus-circle"></i>
+								</button>
+							</h3>
+							<div class="content__recharge-infor mt-5">
+								<h2>Account status</h2>
+								<h4 class="text-danger"><?= $status ?></h4>
+								<button
+									data-toggle="modal"
+									data-target="#infor"
+									class="text-center btn btn-info mb-2 mt-2"
+								>
+									See basic information
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<ul class="responsive__list">
+				<li class="responsive__item-1">
+					<a
+						href="not_verify_account.php"
+						class="btn responsive__item-2"
+						id="home"
+					>
+						<i class="fa-solid fa-house"></i> Home
+					</a>
+				</li>
+				<li class="responsive__item-1">
+					<a
+						class="btn responsive__item-2"
+						id="withdraw"
+						onclick="alertNotification()"
+					>
+						<i class="fa-solid fa-money-bill"></i> Withdrawal
+					</a>
+				</li>
+				<li class="responsive__item-1">
+					<a class="btn responsive__item-2" onclick="alertNotification()">
+						<i class="fa-solid fa-money-bill-transfer"></i> Transfer money
+					</a>
+				</li>
+				<li class="responsive__item-1">
+					<a class="btn responsive__item-2" onclick="alertNotification()">
+						<i class="fa-solid fa-pager"></i> Buy phone card
+					</a>
+				</li>
+				<li class="responsive__item-1">
+					<a class="btn responsive__item-2" onclick="alertNotification()">
+						<i class="fa-solid fa-clock-rotate-left"></i> Transaction history
+					</a>
+				</li>
+			</ul>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="./assets/js/main.js"></script>
+		<script>
+			window.onload = function () {
+				alert(
+					"Please wait 5 minutes. Administrator will verify you. Remember to reload page after 5 minutes"
+				);
+			};
+		</script>
+	</body>
+</html>
