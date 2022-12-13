@@ -160,6 +160,20 @@ function showIdBackName(img) {
 	}
 }
 
+function countingTimeLogOut() {
+	let countDown = 5;
+	let id = setInterval(() => {
+		countDown--;
+		if (countDown >= 0) {
+			$("#counter").html(countDown);
+		}
+		if (countDown === -1) {
+			clearInterval(id);
+			window.location.href = "login.html";
+		}
+	}, 1000);
+}
+
 function alertNotification() {
 	alert("This feature is only available for verified accounts");
 }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Logout</title>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link rel="stylesheet" href="./assets/css/style.css" />
+	</head>
+	<body onload="countingTimeLogOut()">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 mt-5 mx-auto p-3 border rounded bg-light">
+					<h4>Log out successfully</h4>
+					<p>Your account has been logged out the system</p>
+					<p>
+						Click <a href="./login.html">here</a> to back login page, or website
+						will be automatically redirected after
+						<span id="counter" class="text-danger"> 5 </span>
+						seconds.
+					</p>
+					<a class="btn btn-success px-5" href="./login.html">Login</a>
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="./assets/js/main.js"></script>
+	</body>
+</html>
