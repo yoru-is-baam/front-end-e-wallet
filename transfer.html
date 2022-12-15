@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>My E-wallet</title>
+	<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+	<div class="header">
+		<h1>E-WALLET</h1>
+		<div class="dropdown">
+			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class="fas fa-user text-light"></i>
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href="./change_password.html"><i class="fas fa-key mr-2"></i> Change password</a>
+				<a class="dropdown-item" href="./logout.html"><i class="fas fa-long-arrow-right mr-2"></i> Logout</a>
+			</div>
+		</div>
+		<div class="dropleft">
+			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropleftMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class="fas fa-user text-light"></i>
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href="./change_password.html"><i class="fas fa-key mr-2"></i> Change password</a>
+				<a class="dropdown-item" href="./logout.html"><i class="fas fa-long-arrow-right mr-2"></i> Logout</a>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row navi">
+			<div class="col-lg-3">
+				<ul class="navi__list">
+					<li class="navi__item-1">
+						<a href="home.html" class="navi__item-2 btn" type="submit"><i class="fas fa-home-lg-alt"></i> Home</a>
+					</li>
+					<li class="navi__item-1">
+						<a href="withdrawal.html" class="navi__item-2 btn" type="submit"> <i class="fas fa-money-bill"></i>
+							Withdraw</i></a>
+					</li>
+					<li class="navi__item-1">
+						<a href="transfer.html" class="navi__item-2 btn" type="submit"> <i class="fas fa-exchange"></i> Transfer money</a>
+					</li>
+					<li class="navi__item-1">
+						<a href="buy_phone_card.html" class="navi__item-2 btn" type="submit"><i class="fas fa-pager"></i> Buy
+							phone card</a>
+					</li>
+					<li class="navi__item-1">
+						<a href="transaction_history.html" class="navi__item-2 btn" type="submit"><i class="fas fa-history"></i> Transaction history</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-lg-9">
+				<div class="content">
+					<!-- Transfer money -->
+					<div class="content__transfer">
+						<h2>Transfer money</h2>
+						<form novalidate method="post" onsubmit="return checkTransfer()">
+							<input type="text" name="phone" id="phone" placeholder="Phone number" />
+							<input class="mt-3" type="text" name="money-transfer" id="money-transfer" placeholder="Amount of money" />
+							<div class="form-group mt-4 mb-0 text-left">
+								<textarea class="form-control" placeholder="Note..." id="note" rows="3"></textarea>
+							</div>
+							<div class="form-inline mt-3 justify-content-center">
+								<div class="pay__fee">Who pay the fee?</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="pay-fee" id="sender" value="sender" checked />
+									<label class="form-check-label" for="sender">
+										Sender
+									</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="pay-fee" id="receiver" value="receiver" />
+									<label class="form-check-label" for="receiver">
+										Receiver
+									</label>
+								</div>
+							</div>
+							<div class="text-danger text-center mt-4 d-none" id="error-message">Please enter your number</div>
+							<button type="submit" class="btn text-light">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<ul class="responsive__list">
+			<li class="responsive__item-1">
+				<a href="home.html" class="btn responsive__item-2" id="home">
+					<i class="fas fa-home-lg-alt"></i> Home
+				</a>
+			</li>
+			<li class="responsive__item-1">
+				<a href="withdrawal.html" class="btn responsive__item-2" id="withdraw">
+					<i class="fas fa-money-bill"></i> Withdrawal
+				</a>
+			</li>
+			<li class="responsive__item-1">
+				<a href="transfer.html" class="btn responsive__item-2">
+					<i class="fas fa-exchange"></i> Transfer money
+				</a>
+			</li>
+			<li class="responsive__item-1">
+				<a href="buy_phone_card.html" class="btn responsive__item-2">
+					<i class="fas fa-pager"></i> Buy phone card
+				</a>
+			</li>
+			<li class="responsive__item-1">
+				<a href="transaction_history.html" class="btn responsive__item-2">
+					<i class="fas fa-history"></i> Transaction
+					history
+				</a>
+			</li>
+		</ul>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="./assets/js/main.js"></script>
+</body>
+
+</html>

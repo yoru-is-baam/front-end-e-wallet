@@ -6,9 +6,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>My E-wallet</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-	<link rel="stylesheet" href="../style.css" />
+	<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
@@ -16,20 +23,20 @@
 		<h1>E-WALLET</h1>
 		<div class="dropdown">
 			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<i class="fa-solid fa-user text-light"></i>
+				<i class="fas fa-user text-light"></i>
 			</button>
 			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				<a class="dropdown-item" href="../e_wallet-start/reset_password.php"><i class="fa-solid fa-key mr-2"></i> Change password</a>
-				<a class="dropdown-item" href="../e_wallet-start/logout.php"><i class="fa-solid fa-arrow-right-from-bracket mr-2"></i> Logout</a>
+				<a class="dropdown-item" href="./change_password.html"><i class="fas fa-key mr-2"></i> Change password</a>
+				<a class="dropdown-item" href="./logout.html"><i class="fas fa-long-arrow-right mr-2"></i> Logout</a>
 			</div>
 		</div>
 		<div class="dropleft">
 			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropleftMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<i class="fa-solid fa-user text-light"></i>
+				<i class="fas fa-user text-light"></i>
 			</button>
 			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				<a class="dropdown-item" href="../e_wallet-start/reset_password.php"><i class="fa-solid fa-key mr-2"></i> Change password</a>
-				<a class="dropdown-item" href="../e_wallet-start/logout.php"><i class="fa-solid fa-arrow-right-from-bracket mr-2"></i> Logout</a>
+				<a class="dropdown-item" href="./change_password.html"><i class="fas fa-key mr-2"></i> Change password</a>
+				<a class="dropdown-item" href="./logout.html"><i class="fas fa-long-arrow-right mr-2"></i> Logout</a>
 			</div>
 		</div>
 	</div>
@@ -38,22 +45,22 @@
 			<div class="col-lg-3">
 				<ul class="navi__list">
 					<li class="navi__item-1">
-						<a href="default.php" class="navi__item-2 btn" type="submit"><i class="fa-solid fa-house"></i> Home</a>
+						<a href="home.html" class="navi__item-2 btn" type="submit"><i class="fas fa-home-lg-alt"></i> Home</a>
 					</li>
 					<li class="navi__item-1">
-						<a href="withdrawal.php" class="navi__item-2 btn" type="submit"> <i class="fa-solid fa-money-bill"></i>
+						<a href="withdrawal.html" class="navi__item-2 btn" type="submit"> <i class="fas fa-money-bill"></i>
 							Withdrawal</a>
 					</li>
 					<li class="navi__item-1">
-						<a href="transfer.php" class="navi__item-2 btn" type="submit"> <i class="fa-solid fa-money-bill-transfer"></i> Transfer money</a>
+						<a href="transfer.html" class="navi__item-2 btn" type="submit"> <i class="fas fa-exchange"></i> Transfer money</a>
 					</li>
 					<li class="navi__item-1">
-						<a href="buy_phone_card.php" class="navi__item-2 btn" type="submit"><i class="fa-solid fa-pager"></i> Buy
+						<a href="buy_phone_card.html" class="navi__item-2 btn" type="submit"><i class="fas fa-pager"></i> Buy
 							phone
 							card</a>
 					</li>
 					<li class="navi__item-1">
-						<a href="transaction_history.php" class="navi__item-2 btn" type="submit"><i class="fa-solid fa-clock-rotate-left"></i> Transaction history</a>
+						<a href="transaction_history.html" class="navi__item-2 btn" type="submit"><i class="fas fa-history"></i> Transaction history</a>
 					</li>
 				</ul>
 			</div>
@@ -74,7 +81,7 @@
 							<button class="ct-item">Vinaphone</button>
 						</div>
 						<div>
-							<a href="card_infor.php" class="btn btn-success mt-4" type="submit">Buy Card</a>
+							<a href="card_infor.html" class="btn btn-success mt-4" type="submit">Buy Card</a>
 						</div>
 					</div>
 				</div>
@@ -82,36 +89,36 @@
 		</div>
 		<ul class="responsive__list">
 			<li class="responsive__item-1">
-				<a href="default.html" class="btn responsive__item-2" id="home">
-					<i class="fa-solid fa-house"></i> Home
+				<a href="home.html" class="btn responsive__item-2" id="home">
+					<i class="fas fa-home-lg-alt"></i> Home
 				</a>
 			</li>
 			<li class="responsive__item-1">
-				<a href="withdrawal.php" class="btn responsive__item-2" id="withdraw">
-					<i class="fa-solid fa-money-bill"></i> Withdrawal
+				<a href="withdrawal.html" class="btn responsive__item-2" id="withdraw">
+					<i class="fas fa-money-bill"></i> Withdrawal
 				</a>
 			</li>
 			<li class="responsive__item-1">
-				<a href="transfer.php" class="btn responsive__item-2">
-					<i class="fa-solid fa-money-bill-transfer"></i> Transfer money
+				<a href="transfer.html" class="btn responsive__item-2">
+					<i class="fas fa-exchange"></i> Transfer money
 				</a>
 			</li>
 			<li class="responsive__item-1">
-				<a href="buy_phone_card.php" class="btn responsive__item-2">
-					<i class="fa-solid fa-pager"></i> Buy phone card
+				<a href="buy_phone_card.html" class="btn responsive__item-2">
+					<i class="fas fa-pager"></i> Buy phone card
 				</a>
 			</li>
 			<li class="responsive__item-1">
-				<a href="transaction_history.php" class="btn responsive__item-2">
-					<i class="fa-solid fa-clock-rotate-left"></i> Transaction
-					history
+				<a href="transaction_history.html" class="btn responsive__item-2">
+					<i class="fas fa-history"></i> Transaction history
 				</a>
 			</li>
 		</ul>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="./assets/js/main.js"></script>
 </body>
 
 </html>
