@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>OTP</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+	<link rel="stylesheet" href="./assets/css/style.css" /></head>
+
+<body>
+	<div class="container">
+		<h3 class="mt-5 mb-3 text-center text-primary">OTP Code</h3>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<form class="border p-3 rounded bg-light" onsubmit="return checkOtp()" action="" method="POST">
+					<div class="form-group mt-3">
+						<input type="text" class="form-control" id="otp" placeholder="Enter your OTP code" name="otp">
+					</div>
+					<div class="text-danger text-center mb-2 d-none" id="error-message">Please enter your otp</div>
+					<div class="text-center">
+						<button class="btn btn-success mt-2 mb-2" type="submit">Reset</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="./assets/js/main.js"></script>
+</body>
+
+</html>

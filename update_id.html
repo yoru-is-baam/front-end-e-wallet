@@ -27,7 +27,7 @@
 				<i class="fas fa-user text-light"></i>
 			</button>
 			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				<a class="dropdown-item" href="./change_password.html"><i class="fas fa-key mr-2"></i> Change password</a>
+				<a class="dropdown-item" href="./reset_password.html"><i class="fas fa-key mr-2"></i> Change password</a>
 				<a class="dropdown-item" href="./logout.html"><i class="fas fa-long-arrow-right mr-2"></i> Logout</a>
 			</div>
 		</div>
@@ -36,7 +36,7 @@
 				<i class="fas fa-user text-light"></i>
 			</button>
 			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				<a class="dropdown-item" href="./change_password.html"><i class="fas fa-key mr-2"></i> Change password</a>
+				<a class="dropdown-item" href="./reset_password.html"><i class="fas fa-key mr-2"></i> Change password</a>
 				<a class="dropdown-item" href="./logout.html"><i class="fas fa-long-arrow-right mr-2"></i> Logout</a>
 			</div>
 		</div>
@@ -79,15 +79,28 @@
 					<div class="content__ID bg-dark">
 						<form novalidate onsubmit="return validateId()" action="" class="p-3" method="post" enctype="multipart/form-data">
 							<h3>Please update your ID to use other services</h3>
-							<div class="custom-file">
-								<input type="file" class="custom-file-input" id="id-front" name="id-front" onchange="showIdFrontName(this)" />
-								<label class="id custom-file-label" for="id-front" data-browse="Front side">
-									Select your front of ID card
-								</label>
+							<div class="custom-file mt-3">
+								<input
+									type="file"
+									class="custom-file-input"
+									id="id-front"
+									name="id-front"
+									onchange="showIdFrontName(this)"
+								/>
+								<label class="id custom-file-label" for="id-front"
+									>ID Front</label
+								>
 							</div>
 							<div class="custom-file mt-2">
-								<input type="file" class="custom-file-input" id="id-back" name="id-back" onchange="showIdBackName(this)" />
-								<label class="id custom-file-label" for="id-back" data-browse="Back side">Select your back of ID card</label>
+								<input
+									type="file"
+									class="custom-file-input"
+									id="id-back"
+									name="id-back"
+									onchange="showIdBackName(this)"
+									accept="image/gif, image/jpeg, image/png, image/jpg"
+								/>
+								<label class="id custom-file-label" for="id-back">ID Back</label>
 							</div>
 							<div class="text-danger text-center mt-4 d-none" id="error-message">Please enter your name</div>
 							<button class="btn btn-secondary btn-block mt-4" type="submit" class="btn btn-default">Update</button>
