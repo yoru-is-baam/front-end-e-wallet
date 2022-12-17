@@ -430,15 +430,9 @@ body {
 		content: "Transaction type";
 	}
 	.content__recent--history td:nth-of-type(2):before {
-		content: "Fee";
+		content: "Total transaction";
 	}
 	.content__recent--history td:nth-of-type(3):before {
-		content: "Execution time";
-	}
-	.content__recent--history td:nth-of-type(4):before {
-		content: "Status";
-	}
-	.content__recent--history td:nth-of-type(5):before {
 		content: "See detail";
 	}
 
